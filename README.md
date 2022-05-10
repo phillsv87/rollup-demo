@@ -5,7 +5,7 @@ See the scripts in package.json for more info
 ``` json
 {
     "scripts": {
-    "build": "npm run build-nm && npm run build-wm && npm run build-nm-ts && npm run build-wm-ts",
+    "build": "npm run build-nm && npm run build-wm && npm run build-nm-ts && npm run build-wm-ts && npm run build-minified",
     "build-nm": "npm run build-nm-cjs && npm run build-nm-umd && npm run build-nm-es && npm run build-nm-amd && npm run build-nm-iife && npm run build-nm-system",
     "build-wm": "npm run build-wm-cjs && npm run build-wm-umd && npm run build-wm-es && npm run build-wm-amd && npm run build-wm-iife && npm run build-wm-system",
 
@@ -36,7 +36,9 @@ See the scripts in package.json for more info
     "build-wm-es-ts": "rollup with-modules.ts --format es --name out-es --file out/with-modules-out-es-ts.js -m -p node-resolve -p typescript",
     "build-wm-amd-ts": "rollup with-modules.ts --format amd --name out-amd --file out/with-modules-out-amd-ts.js -m -p node-resolve -p typescript",
     "build-wm-iife-ts": "rollup with-modules.ts --format iife --name outiife --file out/with-modules-out-iife-ts.js -m -p node-resolve -p typescript",
-    "build-wm-system-ts": "rollup with-modules.ts --format system --name out-system --file out/with-modules-out-system-ts.js -m -p node-resolve -p typescript"
+    "build-wm-system-ts": "rollup with-modules.ts --format system --name out-system --file out/with-modules-out-system-ts.js -m -p node-resolve -p typescript",
+
+    "build-minified":"rollup with-modules.ts --format umd --name out-umd --file out/with-modules-out-umd-ts-mini.js -m -p node-resolve -p typescript -p terser --compact"
   },
 }
 ```
