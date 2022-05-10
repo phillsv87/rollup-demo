@@ -42,3 +42,12 @@ See the scripts in package.json for more info
   },
 }
 ```
+
+## Using Source maps
+To use source maps with node use the --enable-source-maps or 
+
+``` sh
+node --enable-source-maps out/with-modules-out-umd-ts-mini.js
+# OR
+NODE_OPTIONS=--enable-source-maps node out/with-modules-out-umd-ts-mini.js
+```
